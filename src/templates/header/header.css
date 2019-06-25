@@ -1,0 +1,185 @@
+.header {
+  background: #f9fafb;
+  color: #8a93a3;  
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: .5px;
+  padding-top: 22px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 10px;
+  }
+
+  .selection {
+    font-weight: normal;
+    margin-bottom: 29px;
+    padding-left: 15px;
+    position: relative;
+
+    &--delivery:before {
+      content: '';
+      display: block;
+      height: 10px;
+      background: url(../images/location.svg) no-repeat;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+    }
+
+    &--wallet:before {
+      content: '';
+      display: block;
+      height: 20px;
+      background: url(../images/wallet.svg) no-repeat;
+      background-size: contain;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+    }
+    
+    &__value {
+      background: none;
+      border: none;
+      color: #4ad9bd;
+      font-weight: bold;
+      outline: none;
+    }
+
+    &__wrapper {
+      text-align: right;
+    }
+  }
+
+  &__left-side{
+    display:flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+  }
+  
+  &__logo {
+    margin: 0;
+  } 
+
+  &__center-side {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  &__row {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 35px;
+  }
+
+  &__promo {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      background: #ff8282;
+      height: 10px;
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width:10px;  
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      border-top: 5px solid transparent;
+      border-left: 5px solid #ff8282;
+      border-bottom: 5px solid transparent;
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);  
+    }
+  }
+
+  &__promo-cod {
+    background: none;
+    border: none;
+    color: #ff8282;
+    font-weight: bold;
+    outline: none;
+  }
+
+  &__vip {
+    color: #ffa000;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url(../images/gold-head.svg) no-repeat;
+      height: 10px;
+      left: -20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+    }
+  }
+
+  &__menu {
+    align-self: flex-start;
+
+    &-item {
+      color: #8a93a3;
+      margin-right: 30px;
+      letter-spacing: .5px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+::placeholder {
+  color: #ff8282;
+}
+
+.bascket {
+  align-self: flex-end;
+
+  &__btn {
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__text {
+    color: #8a93a3;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 972px) {
+  .hidden {
+    display: none;
+  }
+}
