@@ -1,0 +1,148 @@
+.goods {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 10px;
+  text-align: center;
+
+  &__item {
+    border-bottom: 1px solid #8a93a3;
+    margin: 0 auto;
+    padding: 26px 0;
+    width:660px;
+
+    &-remove {
+      background: url(../images/trashGrey.svg);
+      height: 20px;
+      width: 20px;
+
+      &:hover {
+        background: url(../images/trashRed.svg);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    width: 100%;
+
+    &_hidden {
+      display: none;
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 21px;
+  }
+
+  &__btn {
+    background: #ff8282;
+    border: 1px solid #c6cdd7;
+    color: white;
+    padding: 10px 15px;
+
+    &:hover {
+      font-weight: boldler;
+    }
+  }
+
+  &__img {
+    height: 100px;
+    width: 100px;
+  }
+
+  &__caracter {
+
+  }
+
+  .caracter {
+    display: flex;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+
+    &__option {
+      color: #8a8a8a;
+      font-size: 13px;font-weight: bold;
+    }
+
+    .counter {
+      border: 1px solid #c6cdd7;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width:96px;
+
+      &__sum {
+        color: #046d9d;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        width: 30%;
+      }
+      
+      &__btn {
+        color: #046d9d;
+        width: 20%;
+
+        &:hover {
+          color: blue;
+        }
+      }      
+    }
+    
+    .residue {
+      color: #ff8282;
+      font-weight: bold;
+    }
+  }
+
+  .prices-title {
+    margin-bottom: 11px;
+  }
+  
+  .prices-text {
+    font-size: 20px;
+    color: #046d9d;
+    
+
+    &_green{
+      color: #4ad9bd;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #8a93a3;
+    font-weight: 600;
+    font-size: 13px;
+  }  
+}
+
+.btn-more {
+  border: 1px solid #c6cdd7;
+  color: #046d9d;
+  padding: 10px 15px;
+  margin: 20px auto;
+  
+  &:hover {
+    color: blue;
+  }
+}
