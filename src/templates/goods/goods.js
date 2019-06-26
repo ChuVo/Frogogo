@@ -6,6 +6,7 @@
         clearBtn = document.querySelector('.cart__btn'),
         products = document.querySelectorAll('.goods__item'),
         confirm = document.querySelector('.confirm'),
+        productCount = document.querySelector('.bascket__count'),
         empty = cartWrapper.querySelector('.empty');
       
   let id = 1;
@@ -32,6 +33,7 @@
 
         item.firstElementChild.appendChild(removeBtn);
 
+        calcGoods();
         removeFromCart();
     });
 });
@@ -42,15 +44,15 @@ function showConfirm() {
   const id = setInterval( frame, 10);
 
   function frame() {
-      if( counter == 10) {
-          clearInterval(id);
-          confirm.style.display = 'none';
-      } else {
-          counter--;
-          confirm.style.opacity = '.' + counter;//исчезание корзинки
-          confirm.style.transform = `translateY(-${counter}px)`;//анимация корзинки, смещение вниз
-      }            
-  }
+    if( counter == 10) {
+        clearInterval(id);
+        confirm.style.display = 'none';
+    } else {
+        counter--;
+        confirm.style.opacity = '.' + counter;//исчезание корзинки
+        confirm.style.transform = `translateY(-${counter}px)`;//анимация корзинки, смещение вниз
+    }            
+  };
 };
 
 function showMoreProduct() {
@@ -62,6 +64,21 @@ function showMoreProduct() {
 
 function clearCart() {
   cartWrapper.innerHTML = '';
+  calcGoods();
+};
+
+function calcGoods() {
+  const count = cartWrapper.querySelectorAll('.goods__item');
+
+  if (count.length !== 0) {
+    console.log(count.length + ">0");
+    productCount.style.visibility = 'visible';
+    productCount.innerHTML = count.length;
+    
+  } else {
+    console.log(count.length + '= 0');
+    productCount.style.visibility = 'hidden';
+  }         
 };
 
 function removeFromCart() {
@@ -69,7 +86,7 @@ function removeFromCart() {
   removeBtn.forEach(function (btn) {
       btn.addEventListener('click', () => {
           btn.parentElement.parentElement.remove();
-          // calcGoods();
+          calcGoods();
           // calcTotal();
       });
   });
