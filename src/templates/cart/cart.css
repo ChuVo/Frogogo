@@ -1,7 +1,7 @@
-.cart { border: 1px solid red;
+.cart {
   background: white;
   color: #1e1e3c;
-  /* display: none; */
+  display: none;
   margin: 0 auto;
   position: absolute;
   top: 15%;
@@ -44,6 +44,12 @@
       background: linear-gradient(100deg, rgba(74,217,189,1) 2%, rgba(74,217,217,1) 18%, rgba(74,217,217,1) 86%, rgba(74,217,189,1) 100%);
     }
   }
+
+  .slider__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
 }
 
 .empty {
@@ -63,3 +69,98 @@
     width: 100%
   }        
 }
+
+.cart__counting {
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  flex-direction: column;
+  width: 100%;
+
+  .cart__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+
+    &_ex {
+      align-items: center;
+      border-top: 1px solid  #8a93a3;
+      border-bottom: 1px solid  #8a93a3;
+      height: 75px;
+    }
+
+    &_margins {
+      margin: 40px 0 15px 0;
+    }
+
+    .total-product {
+      color: #1e1e3c;
+    }
+
+    .slider-value {
+      color:#c6cdd7;
+      font-size: 20px;
+    }
+
+    .slider-text,
+    .delivery-text {
+      color: #8a93a3;
+    }
+
+    .full-price {
+      color: #046d9d;
+    }
+  }
+
+  .slider__fill {
+    appearance: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 40px;
+      width: 100%; /* Full-width */
+      height: 5px; /* Specified height */
+      background: #4ad9bd; /* Grey background */
+      outline: none; /* Remove outline */
+      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+      transition: opacity .2s;
+  
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        size: 45px;
+        border-radius: 50%;
+        background: url(../images/slider-icon.svg) #4ad9bd;
+        background-size: contain;
+        cursor: pointer;
+      }
+    }
+
+  .tip {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &_font-big {
+    font-size: 20px;
+  }
+}
+
+.send {
+  background: #4ad9bd;
+  border: 2px solid #046d9d;
+  color: white;
+  visibility: hidden;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 50px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  transition: .3s;
+}
+

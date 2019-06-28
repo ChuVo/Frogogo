@@ -95,7 +95,7 @@
 
 .navigation {
   align-self: center;
-  background: rgba(0,0,0,.8);
+  background: rgba(255,255,255,.9);
   border-radius: 10px;
   border-left: 2px solid #4ad9bd;
   display: flex;
@@ -114,7 +114,6 @@
   
   &__item {  
     border-bottom: 1px solid rgb(253, 253, 143);
-    color: white;
     font-size: 1.8rem;
     font-weight: bold;
     height: 23%;

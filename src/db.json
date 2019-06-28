@@ -1,5 +1,19 @@
 {
-  "color": "rgb(214, 205, 105)",
-  "age": 25,
-  "adress": "Earth planet"
+  "goods": {
+    "id1": {
+      "title": "Стакан YPSILON BRIO CAPPUCCINO 220 мл",
+      "price": 599,
+      "bonus": 300
+    },
+    "id2": {
+      "title": "Одеяло Woolfield Sunrise",
+      "price": 1725,
+      "bonus": 1035
+    },
+    "id3": {
+      "title": "Беспроводная колонка Goodyear Bluetooth Speaker",
+      "price": 2699,
+      "bonus": 1070
+    }
+  }
 }

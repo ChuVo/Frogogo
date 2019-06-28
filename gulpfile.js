@@ -167,8 +167,13 @@ gulp.task( 'watch', () => {
 
 gulp.task( 'build-fonts', () => {
   gulp.src( paths.src.fonts )
-    //.pipe( filter( ['*.woff', '*.woff2', '*,eot', '*.ttf'] )) //with filter not working
+    //.pipe( filter( ['*.woff', '*.woff2', '*,eot', '*.ttf'] )), //with filter not working
     .pipe( gulp.dest( paths.build.fonts ));
+});
+
+gulp.task( 'build-db', () => {
+  gulp.src( paths.contextJson )
+    .pipe( gulp.dest( paths.build.scripts ));
 });
 
 gulp.task( 'build-images', () =>
@@ -182,7 +187,7 @@ gulp.task('clean-build', () => {
     .pipe(clean());
 });
 
-gulp.task( 'build', [ 'build-js', 'build-css', 'build-fonts', 'build-images', 'compile'] );
+gulp.task( 'build', [ 'build-js', 'build-css', 'build-fonts', 'build-images', 'compile', 'build-db'] );
 
 gulp.task( 'default', ['build'] );
 gulp.task( 'dev', ['build', 'browserSync'] );

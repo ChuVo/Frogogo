@@ -1,21 +1,63 @@
 <div class="cart">
-        <div class="cart__body">
-            <div class="cart__head">
-                <h1 class="cart__title">Вот что в вашей корзине</h1>
-                <button class="btn cart__btn">Очистить корзину</button>
-            </div>            
-            <hr>
-            <div class="cart__wrapper">
-                <div class="goods">
-                    <div class="empty">
-                        Ваша корзина пока пуста
-                    </div>
-                </div>                
-            </div>
-            <button class="cart__confirm btn">Оформить заказ</button>
+    <div class="cart__body">
+        <div class="cart__head">
+            <h1 class="cart__title">Вот что в вашей корзине</h1>
+            <button class="btn cart__btn">Очистить корзину</button>
+        </div>            
+        <hr>
+        <div class="cart__wrapper">
+            <div class="goods">
+                <div class="empty">
+                    Ваша корзина пока пуста
+                </div>
+            </div>                
         </div>
-    </div><div class="cart__total">Общая сумма: <span>0</span> руб</div>
 
-    <div class="confirm">
-        <img src="images/card.svg" alt="confirm">
+        <div class="cart__counting">
+        <div class="cart__box">
+            <div class="total-product">
+                <span id="total-product">4</span>
+                товара на сумму
+            </div>
+            <div class="total-product cart__counting_font-big">
+                <span id="total-price">4555</span>
+                ₽
+            </div>
+        </div>
+        <div class="tip">Передвигая лягушку, выберите сколько рублей с личного счёта вы хотите потратить</div>
+        <div class="cart__box cart__box_margins">
+            <div class="slider-value">
+                0₽
+            </div>
+            <div class="slider-value">
+                <span id="slider-value"></span>
+            </div>
+        </div>
+        <input class="slider__fill" type="range" min="0" max="100" step="1" value="50" id="slider-fill">
+        <div class="cart__box">
+            <span class="slider-text">Используется рублей с личного счёта</span>
+            <span class="slider-text cart__counting_font-big"><span id="uses-bonus"></span>₽<span></span>
+        </div>
+        <div class="cart__box cart__box_ex">
+            <span class="delivery-text">Доставка</span>
+            <span class="delivery-text cart__counting_font-big " id="dilivery">Бесплатно</span>
+        </div>
+        <div class="cart__box">
+            <span class="full-price">Итого к оплате</span>
+            <span class="full-price cart__counting_font-big " id="full-price">4654</span>
+        </div>
+
     </div>
+        <button class="cart__confirm btn">Оформить заказ</button>
+    </div>
+    <div class="send">
+        <span>Заказ успешно оформлен!!!</span>
+    </div>  
+
+
+</div>
+
+
+<div class="confirm">
+    <img src="images/card.svg" alt="confirm">
+</div>
